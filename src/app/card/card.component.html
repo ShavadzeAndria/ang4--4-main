@@ -1,0 +1,20 @@
+<p>card works!</p>
+
+
+
+<div class="student-info">
+    <h2>Student Info</h2>
+    <p>Name: {{ student.name }}</p>
+    <p>Age: {{ student.age }}</p>
+    <p>Grade: {{ student.grade }}</p>
+    <p>Subjects: {{ student.subjects }}</p>
+    <p>Enrolled: {{ student.isEnrolled ? 'Yes' : 'No' }}</p>
+
+    <h3>Address</h3>
+    <p>Street: {{ student.address.street }}</p>
+    <p>City: {{ student.address.city }}</p>
+    <p>ZIP: {{ student.address.zip }}</p>
+      <button (click)="delete(index)">DELETE</button>
+      <button (click)="edit(index)">EDIT</button>
+    <input type="checkbox" name="" id="">
+</div>

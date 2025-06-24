@@ -1,0 +1,46 @@
+
+   <input type="text" placeholder="name"  [(ngModel)]="this.user1.name ">
+   <input type="number" placeholder="age"  [(ngModel)]="this.user1.age ">
+
+   <button (click)="crUser()">createUser</button>
+
+
+
+
+   
+   <input type="text" placeholder="name"  [(ngModel)]="this.player1.name ">
+   <input type="number" placeholder="age"  [(ngModel)]="this.player1.age ">
+
+   <button (click)="crPlayer()">createPlayer</button>
+
+
+
+   <button (click)="showData()">Show Data of Users</button>
+   <!-- <img src="../../../public/images/photo-1438761681033-6461ffad8d80.jpg" alt=""> -->
+    <!-- <div class="imgCont">
+
+    </div> -->
+
+
+    <!-- <img src="/images/photo-1438761681033-6461ffad8d80.jpg" alt=""> -->
+  <!-- <img src="/images/123.jpg" alt=""> -->
+
+
+   <h1 *ngIf="showTitle">{{title}}</h1>
+   <div class="cont" *ngIf="showUsers">
+       <div class="box" *ngFor="let user of users">
+            <img [src]="user.avatar" alt="">
+            <div class="names">
+                <h2>{{user.first_name}}</h2>
+                <h2>{{user.last_name}}</h2>
+            </div>
+            <p>{{user.email}}</p>
+            <button >Save</button>
+       </div>
+   </div>
+
+
+
+
+
+

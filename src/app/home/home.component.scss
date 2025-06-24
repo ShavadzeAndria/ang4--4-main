@@ -1,0 +1,54 @@
+
+@import '../../styles.scss';
+
+
+@mixin myflexStyles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+$myfonrsize: 30px;
+
+.imgCont{
+    width: 300px;
+    height: 250px;
+    background-image: url(../../../public/images/photo-1438761681033-6461ffad8d80.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    text-align: center;
+    font-size: $myfonrsize;
+    font-family: mainFont;
+}
+
+
+button{
+    background-color: $mainColor;
+    @include buttonStyle;
+}
+
+
+.cont{
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include myflexStyles();
+
+     .box{
+        width: 200px;
+        padding: 10px;
+        border: 1px solid black;
+        img{
+            width: 100%;
+        }
+        button{
+            @include buttonStyle;
+        }
+    }
+}
+

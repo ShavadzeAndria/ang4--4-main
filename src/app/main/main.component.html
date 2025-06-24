@@ -1,0 +1,51 @@
+
+
+
+<h2>Students</h2>
+ 
+    <form>
+      <input class="input-style" type="text" placeholder="Enter name" [(ngModel)]="student.name" name="name" required />
+      <input class="input-style" type="number" placeholder="Enter age" [(ngModel)]="student.age" name="age" required />
+      <input class="input-style" type="number" placeholder="Enter grade" [(ngModel)]="student.grade" name="grade" required />
+      <input class="input-style" type="text" placeholder="Enter subjects" [(ngModel)]="student.subjects" name="subjects" required />
+      <label>is enrolled?</label>
+      <select name="Enrolled" id="" [(ngModel)]="student.isEnrolled" name="is enrolled" required>
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select>
+      <input class="input-style" type="text" placeholder="Enter address" [(ngModel)]="student.address.street" name="street" required />
+      <input class="input-style" type="text" placeholder="Enter city" [(ngModel)]="student.address.city" name="city" required />
+      <input class="input-style" type="text" placeholder="Enter Zip" [(ngModel)]="student.address.zip" name="zip" required />
+      <button (click)="submit()">submit</button>
+    </form>
+
+
+
+  <app-display-data 
+     [studentData]="studentArr" 
+     (deleteId)="deleteStudent($event)"
+      (editId)="editStudent($event)"
+     ></app-display-data>
+
+<button (click)="showUsersTable = !showUsersTable">
+  {{ showUsersTable ? 'Hide Users Table' : 'Show Users Table' }}
+</button>
+
+<table *ngIf="showUsersTable" border="1" style="width: 100%; margin-top: 10px; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>

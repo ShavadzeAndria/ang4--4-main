@@ -1,0 +1,20 @@
+<nav>
+   <ul>
+      <li><a routerLink="/home" [routerLinkActive]="active" [routerLinkActiveOptions]="{exact :false}" >Home</a></li>
+      <li><a routerLink="/main" [routerLinkActive]="active">Main</a></li>
+      <li><a routerLink="/about" [routerLinkActive]="active">About</a></li>
+      <li><a routerLink="/services" [routerLinkActive]="active">Services</a></li>
+      <app-button 
+        [info]="infoFromParent" 
+        [btnClass]="infoAboutColor"
+        (buttonClicked)="buttonClicked($event)"
+        >
+      </app-button>
+   </ul>
+</nav>
+
+
+
+
+
+
