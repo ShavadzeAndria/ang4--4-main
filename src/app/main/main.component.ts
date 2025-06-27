@@ -84,11 +84,4 @@ export class MainComponent {
   deleteStudent(ind : number){
     this.delete(ind)
   }
-  showUsersTable = false;
-
-users = [
-  { name: 'Ana', age: 25, email: 'ana@example.com' },
-  { name: 'Giorgi', age: 30, email: 'giorgi@example.com' },
-];
-
 }

@@ -1,20 +1,21 @@
-<p>card works!</p>
-
-
-
-<div class="student-info">
+<div class="student-card">
     <h2>Student Info</h2>
-    <p>Name: {{ student.name }}</p>
-    <p>Age: {{ student.age }}</p>
-    <p>Grade: {{ student.grade }}</p>
-    <p>Subjects: {{ student.subjects }}</p>
-    <p>Enrolled: {{ student.isEnrolled ? 'Yes' : 'No' }}</p>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>Age:</strong> {{ student.age }}</p>
+    <p><strong>Grade:</strong> {{ student.grade }}</p>
+    <p><strong>Subjects:</strong> {{ student.subjects }}</p>
+    <p><strong>Enrolled:</strong> {{ student.isEnrolled ? 'Yes' : 'No' }}</p>
 
     <h3>Address</h3>
-    <p>Street: {{ student.address.street }}</p>
-    <p>City: {{ student.address.city }}</p>
-    <p>ZIP: {{ student.address.zip }}</p>
-      <button (click)="delete(index)">DELETE</button>
-      <button (click)="edit(index)">EDIT</button>
-    <input type="checkbox" name="" id="">
+    <p><strong>Street:</strong> {{ student.address.street }}</p>
+    <p><strong>City:</strong> {{ student.address.city }}</p>
+    <p><strong>ZIP:</strong> {{ student.address.zip }}</p>
+
+    <div class="button-group">
+        <button class="btn delete" (click)="delete(index)">Delete</button>
+        <button class="btn edit" (click)="edit(index)">Edit</button>
+        <label class="checkbox">
+            <input type="checkbox"> Select
+        </label>
+    </div>
 </div>
